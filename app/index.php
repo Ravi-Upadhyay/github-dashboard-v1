@@ -13,6 +13,8 @@
   <meta name="description" content="">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="stylesheet" href="bower_components/html5-boilerplate/dist/css/normalize.css">
+  <link rel="stylesheet" href= "bower_components/angular-material/angular-material.min.css">
+  <link rel="stylesheet" href="../dist/css/font-awesome.min.css">
   <link rel="stylesheet" href="../dist/css/main.css">
   <script src="bower_components/html5-boilerplate/dist/js/vendor/modernizr-2.8.3.min.js"></script>
 </head>
@@ -44,6 +46,8 @@
   <script src="components/home/home.comp.js"></script>
   <script src="components/followers/followers.comp.js"></script>
   <script src="components/repos/repos.comp.js"></script>
+  <script src="factories/data.fact.js"></script>
+  <script src="services/data.service.js"></script>
 
 
 
