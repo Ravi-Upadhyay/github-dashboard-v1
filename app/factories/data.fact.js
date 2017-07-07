@@ -7,7 +7,10 @@
 
   function dataFactory($http,$httpParamSerializerJQLike){
     return {
-      functionName:functionNameHere
+      getUserData:getUserData,
+      getRepoData:getRepoData,
+      getFollowerData:getFollowerData,
+      getFollowingData:getFollowingData
     };
 
   function functionNameHere(){

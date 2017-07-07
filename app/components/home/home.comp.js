@@ -4,13 +4,17 @@
   angular.module('gitDashboard')
   .component('homeComponent',{
     templateUrl:'components/home/home.temp.html',
-    controller: ('homeComtoller', homeComtoller)
+    controller: ('homeController', homeController)
   });
 
-  homeComtoller.$inject = [];
+  homeController.$inject = ['dataService','dataFactory'];
 
-  function homeComtoller(){
-    
+  function homeController(dataService,dataFactory){
+    var self = this;
+    self.hPData = {
+      userName:'',
+      dataRec:undefined
+    };    
   }
 
 })();
