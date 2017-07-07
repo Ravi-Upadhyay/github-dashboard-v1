@@ -13,7 +13,7 @@
   <meta name="description" content="">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="stylesheet" href="bower_components/html5-boilerplate/dist/css/normalize.css">
-  <link rel="stylesheet" href="app.css">
+  <link rel="stylesheet" href="../dist/css/main.css">
   <script src="bower_components/html5-boilerplate/dist/js/vendor/modernizr-2.8.3.min.js"></script>
 </head>
 <body>
@@ -42,6 +42,8 @@
   <script src="app.module.js"></script>
   <script src="core/config/route.config.js"></script>
   <script src="components/home/home.comp.js"></script>
+  <script src="components/followers/followers.comp.js"></script>
+  <script src="components/repos/repos.comp.js"></script>
 
 
 
