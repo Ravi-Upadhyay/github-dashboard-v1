@@ -19,19 +19,28 @@
                 </form>
             </div>
             <!--COLUMN-1: (ends)-->
-
-            <div layout="row" flex="100" layout-align="center start">
+            
+            <!--COLUMN-2: COLUMN FOR AVATAR IMAGE AND NAME.VISIBLE ONLY IF DATA AVAILABLE-->
+            <div layout="row" flex="100" layout-align="center center" layout-wrap ng-if="$ctrl.hPData.dataRec !== undefined" class="user-description" md-whiteframe="1">
                 
-                <div flex-xs="100" flex-sm="30" flex-gt-md="20">
-                    <img alt='avatar-image' ng-src='' />
+                <div flex-xs="60" flex-sm="30" flex-gt-md="20" class="avatar-image big">
+                    <img alt='avatar-image' ng-src='{{$ctrl.hPData.dataRec.avatarImage}}' class="md-avatar" />
                 </div>
 
-                <div flex-xs="100" flex-sm="70" flex-gt-md="80">
+                <div flex-xs="70" flex-sm="70" flex-gt-md="80" layout="column" >
 
+                    <div flex="100" class="child-centered">
+                        <h1>{{$ctrl.hPData.dataRec.name}}</h1>
+                        <span><a ng-href="{{$ctrl.hPData.dataRec.htmlUrl}}"><i class="fa fa-external-link fa-icon-link" aria-hidden="true"></i></a></span>
+                    </div>
+                    <div flex="100" class="child-centered">
+                        <span class="regular-text">USER SINCE: {{$ctrl.hPData.dataRec.userSince | date:'MMM dd, yyyy' | uppercase}}</span>
+                    </div>
                 </div>
                 
                 
             </div>
+            <!--COLUMN-2: (ends)-->
         </div>
         <!--WRAPPER (ends)-->
     </div>
