@@ -7,14 +7,26 @@
     controller: ('homeController', homeController)
   });
 
-  homeController.$inject = ['dataService','dataFactory'];
+  homeController.$inject = ['$mdToast','dataService','dataFactory'];
 
-  function homeController(dataService,dataFactory){
+  function homeController($mdToast,dataService,dataFactory){
     var self = this;
     self.hPData = {
       userName:'',
       dataRec:undefined
-    };    
+    };   
+
+    self.submitUserName = function(){
+      dataFactory.getUserData(self.hPData.userName).then(function(data){
+        if(data.statusCode === 0){
+          //$http returned failure
+          $mdToast.showSimple('OOPS! Something Went Wrong');
+        }
+        else{
+          console.log(data);
+        }
+      });
+    };
   }
 
 })();
