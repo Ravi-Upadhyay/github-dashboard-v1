@@ -49,7 +49,7 @@
   * statusCode , response. If $http failed status code will be 0 else 1.
   */
   function getFollowingData(userName){
-      var url = getUrl(1,userName);
+      var url = getUrl(3,userName);
       return $http.get(url).then(onSuccess,onFailure);
   }
   

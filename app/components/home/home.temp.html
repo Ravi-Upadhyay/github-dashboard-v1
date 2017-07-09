@@ -49,12 +49,12 @@
                     <span class="card-caption">REPOSITORIES</span>
                 </md-card>
                 
-                <md-card flex-xs="100" flex-sm="30" flex-gt-md="30" class="my-card home-page-cards child-centered" ng-click="$ctrl.redirectTo('followers')">
+                <md-card flex-xs="100" flex-sm="30" flex-gt-md="30" class="my-card home-page-cards child-centered" ng-click="$ctrl.redirectTo('followers','FOLLOWERS')">
                     <span class="head-stat">{{$ctrl.hPData.dataRec.followerCount}}</span>
                     <span class="card-caption">FOLLOWERS</span>
                 </md-card>
                 
-                <md-card flex-xs="100" flex-sm="30" flex-gt-md="30" class="my-card home-page-cards child-centered" ng-click="$ctrl.redirectTo('followers')">
+                <md-card flex-xs="100" flex-sm="30" flex-gt-md="30" class="my-card home-page-cards child-centered" ng-click="$ctrl.redirectTo('followers','FOLLOWING')">
                     <span class="head-stat">{{$ctrl.hPData.dataRec.followingCount}}</span>
                     <span class="card-caption">FOLLOWING</span>
                 </md-card>

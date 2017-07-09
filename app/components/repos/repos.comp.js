@@ -7,9 +7,9 @@
     controller: ('repoController', repoController)
   });
 
-  repoController.$inject = ['$mdToast','$state','dataService','dataFactory'];
+  repoController.$inject = ['$window','$mdToast','$state','dataService','dataFactory'];
 
-  function repoController($mdToast,$state,dataService,dataFactory){
+  function repoController($window,$mdToast,$state,dataService,dataFactory){
 
     var self=this;
     
@@ -17,6 +17,7 @@
       'userName': dataService.getData('userName'),
       'avatarImage': dataService.getData('avatarImage'),
       'name': dataService.getData('name'),
+      'sortMechanism':'id',
       'dataRec':undefined
     };
 
@@ -32,6 +33,10 @@
       });
     })();
     
+    self.redirectExtUrl = function(url){
+      $window.location.href = url;
+      //console.log(url);
+    };
   }
 
 })();

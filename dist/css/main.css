@@ -52,6 +52,10 @@ html {
 .regular-text {
   color: #555555; }
 
+.invert-text {
+  background-color: #555555 !important;
+  color: #fff !important; }
+
 .text-center {
   text-align: center; }
 
@@ -61,6 +65,8 @@ html {
   border-bottom: 3px solid #666666;
   min-height: 80px;
   padding: 10px; }
+  .my-header h1, .my-header h2, .my-header h3, .my-header h4 {
+    margin: 0 0 10px 0; }
 
 /*
 HOME PAGE: 
@@ -95,7 +101,7 @@ HOME PAGE:
 .user-description {
   background-color: #fff;
   border-radius: 2px;
-  margin: 30px 0;
+  margin: 20px 0;
   padding: 20px; }
   .user-description h1 {
     margin: 10px 0 10px 0; }
@@ -125,5 +131,37 @@ HOME PAGE:
     min-height: 30px;
     line-height: 30px;
     color: #555555; }
+  .home-page-cards .card-content {
+    font-size: 12px;
+    font-weight: bold;
+    min-height: 120px;
+    line-height: 13px;
+    padding: 10px 0 10px 0;
+    overflow: hidden;
+    color: #6f6f6f; }
+
+.detail-cards {
+  min-height: 200px;
+  text-align: center;
+  padding: 10px; }
+  .detail-cards .card-avatar {
+    min-height: 100px; }
+    .detail-cards .card-avatar .avatar-image-header {
+      width: 100px;
+      height: 100px; }
+  .detail-cards .card-caption {
+    font-size: 14px;
+    padding: 5px 0 5px 0;
+    margin: 10px 0 10px 0;
+    font-weight: bold;
+    min-height: 20px;
+    line-height: 18px;
+    color: #555555; }
+  .detail-cards .card-stats {
+    font-size: 12px;
+    font-weight: bold;
+    min-height: 15px;
+    line-height: 15px;
+    color: #6f6f6f; }
 
 /*# sourceMappingURL=main.css.map */

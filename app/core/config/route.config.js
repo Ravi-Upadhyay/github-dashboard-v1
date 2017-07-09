@@ -20,17 +20,18 @@
       var home = {
         name: 'home',
         url: '/home',
-        template: '<home-component></home-component>',
+        template: '<home-component></home-component>'
       };
       var repos = {
         name: 'repos',
         url: '/repos',
-        template: '<repo-component></repo-component>',
+        template: '<repo-component></repo-component>'
       };
       var followers = {
         name: 'followers',
         url: '/followers',
         template: '<follow-component></follow-component>',
+        params:{pageMode:undefined}
       };
 
       $stateProvider.state(home);

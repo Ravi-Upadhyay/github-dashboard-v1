@@ -12,12 +12,40 @@
 
             <div flex-xs="70" flex-sm="80" flex-gt-md="80" layout="column" >
                 <h1>{{$ctrl.rpData.name}}</h1>
+                <h3 class="regular-text">REPOSITORIES</h3>
             </div> 
 
         </div>
         <!--WRAPPER: Mainly for different devices it provides wrappers of different widths-->
         <div flex-xs="100" flex-sm="90" flex-gt-md="70" layout="column" class="page-wrapper">            
-            <h3 class="regular-text text-center">REPOSITORIES</h3>
+           
+           <!--COLUMN-1: FILTER/SORT BUTTON-->
+           <div flex="100" layout="row">
+                <md-input-container flex-xs="50" flex-sm="30" flex-offset-sm="70" flex-gt-md="80" flex-offset-gt-md="70" flex-offset-xs="50">
+                    <label>Filter</label>
+                    <md-select ng-model="$ctrl.rpData.sortMechanism">
+                        <md-option ng-value="name">Name</md-option>
+                        <!--<md-option ng-value="created_at">Age</md-option>-->
+                    </md-select>
+                </md-input-container>
+           </div>
+           <!--COLUMN-1: (ends)-->
+
+           <!--COLUMN-2: DATA CARDS-->
+            <div flex="100" layout="row" layout-align="space-around center" layout-wrap>
+               
+                <md-card flex-xs="100" flex-sm="30" flex-gt-md="30" class="my-card home-page-cards child-centered" ng-repeat="repo in $ctrl.rpData.dataRec | orderBy: $ctrl.rpData.sortMechanism" ng-click="$ctrl.redirectExtUrl(repo.html_url)"  ng-if="$ctrl.rpData.dataRec.length !== 0">
+                    <span class="card-caption" md-truncate>{{repo.name | uppercase}}</span>
+                    <span class="card-content">{{repo.description}}</span>
+                </md-card>
+
+                <md-card flex-xs="100" flex-sm="30" flex-gt-md="30" class="my-card home-page-cards child-centered" ng-if="$ctrl.rpData.dataRec.length === 0">
+                    <span class="card-caption" md-truncate>NO DATA FOUND</span>
+                    <span class="card-content">This github account has no repositories.</span>
+                </md-card>
+                
+            </div>
+             <!--COLUMN-2: DATA CARDS (ends)-->
         </div>
         <!--WRAPPER: (ends)-->
 

@@ -56,10 +56,18 @@
     /*
     * FUNCTION: to be involed when user wants to see any thing in detail repos, followers, follows
     */
-    self.redirectTo = function(stateName){
+    self.redirectTo = function(stateName,param){
       //Checking if userName set
       if(dataService.getData('userName') !== undefined){
-        $state.go(stateName);
+       
+        if(param === undefined){
+          $state.go(stateName);
+        }
+        else{
+          dataService.setData('pageMode',param);
+          var params = {pageMode:param};
+          $state.go(stateName,params);
+        }
       }
       else{
         $mdToast.showSimple('Please Select Proper User Name');
