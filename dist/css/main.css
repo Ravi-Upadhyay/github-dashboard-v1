@@ -68,6 +68,18 @@ html {
   .my-header h1, .my-header h2, .my-header h3, .my-header h4 {
     margin: 0 0 10px 0; }
 
+.sort-selection {
+  width: 100%;
+  font-size: 12px;
+  line-height: 2em;
+  padding: 0.5em;
+  margin: 10px 0 20px 0;
+  font-weight: bold;
+  text-transform: uppercase;
+  color: white;
+  background-color: #4d4d4d !important;
+  box-shadow: 1px 1px 5px 1px #bbbbbb; }
+
 /*
 HOME PAGE: 
 */

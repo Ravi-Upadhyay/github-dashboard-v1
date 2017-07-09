@@ -21,13 +21,13 @@
            
            <!--COLUMN-1: FILTER/SORT BUTTON-->
            <div flex="100" layout="row">
-                <md-input-container flex-xs="50" flex-sm="30" flex-offset-sm="70" flex-gt-md="80" flex-offset-gt-md="70" flex-offset-xs="50">
-                    <label>Filter</label>
-                    <md-select ng-model="$ctrl.rpData.sortMechanism">
-                        <md-option ng-value="name">Name</md-option>
-                        <!--<md-option ng-value="created_at">Age</md-option>-->
-                    </md-select>
-                </md-input-container>
+                <div flex-xs="50" flex-sm="30" flex-offset-sm="70" flex-gt-md="80" flex-offset-gt-md="70" flex-offset-xs="50" style="min-height: 50px;">
+                    <select ng-model="$ctrl.rpData.sortMechanism" class="sort-selection">
+                        <option value="id">Repo Id</option>
+                        <option value="name">Repo Name</option>
+                        <option value="created_at">Repo Date</option>
+                    </select>
+                </div>
            </div>
            <!--COLUMN-1: (ends)-->
 
@@ -35,7 +35,7 @@
             <div flex="100" layout="row" layout-align="space-around center" layout-wrap>
                
                 <md-card flex-xs="100" flex-sm="30" flex-gt-md="30" class="my-card home-page-cards child-centered" ng-repeat="repo in $ctrl.rpData.dataRec | orderBy: $ctrl.rpData.sortMechanism" ng-click="$ctrl.redirectExtUrl(repo.html_url)"  ng-if="$ctrl.rpData.dataRec.length !== 0">
-                    <span class="card-caption" md-truncate>{{repo.name | uppercase}}</span>
+                    <span class="card-caption invert-text" md-truncate>{{repo.name | uppercase}}</span>
                     <span class="card-content">{{repo.description}}</span>
                 </md-card>
 

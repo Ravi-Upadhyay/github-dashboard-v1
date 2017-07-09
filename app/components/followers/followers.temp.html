@@ -21,15 +21,19 @@
            
            <!--COLUMN-1: FILTER/SORT BUTTON-->
            <div flex="100" layout="row">
-                <md-input-container flex-xs="50" flex-sm="30" flex-offset-sm="70" flex-gt-md="80" flex-offset-gt-md="70" flex-offset-xs="50">
-                    <label>Filter</label>
-                    <md-select ng-model="$ctrl.foData.sortMechanism">
-                        <md-option ng-value="name">Name</md-option>
-                        <md-option ng-value="repoCount">Repos</md-option>
-                        <md-option ng-value="followerCount">Followers</md-option>
-                        <md-option ng-value="followingCount">Followings</md-option>
-                    </md-select>
-                </md-input-container>
+                <!--<md-input-container flex-xs="50" flex-sm="30" flex-offset-sm="70" flex-gt-md="80" flex-offset-gt-md="70" flex-offset-xs="50">-->
+                    <!--<label>Filter</label>-->
+                <div flex-xs="50" flex-sm="30" flex-offset-sm="70" flex-gt-md="80" flex-offset-gt-md="70" flex-offset-xs="50" style="min-height: 50px;">
+                    <select ng-model="$ctrl.foData.sortMechanism" class="sort-selection">
+                        
+                        <option value="userName">User Name</option>
+                        <option value="name">Full Name</option>
+                        <option value="repoCount">Repositories</option>
+                        <option value="followerCount">Followers</option>
+                        <option value="followingCount">Followings</option>
+                    </select>
+                </div>
+                <!--</md-input-container>-->
            </div>
            <!--COLUMN-1: (ends)-->
 

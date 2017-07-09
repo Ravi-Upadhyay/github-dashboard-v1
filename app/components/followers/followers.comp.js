@@ -15,7 +15,7 @@
       'userName': dataService.getData('userName'),
       'avatarImage': dataService.getData('avatarImage'),
       'name': dataService.getData('name'),
-      'sortMechanism':'userName',
+      'sortMechanism':'followerCount',
       'pageMode':dataService.getData('pageMode'),
       'dataRec':[],
       'dataExtracted':[]
