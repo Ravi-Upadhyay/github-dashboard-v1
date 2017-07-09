@@ -167,6 +167,7 @@ HOME PAGE:
 
     .card-caption{
         font-size:14px;
+        padding:5px 2px 5px 2px;
         font-weight:bold;
         min-height: 30px;
         line-height: 30px;
@@ -180,7 +181,7 @@ HOME PAGE:
         line-height: 13px;
         padding:10px 0 10px 0;
         overflow:hidden;
-        color:lighten($regular-text,10%);
+        color:lighten($regular-text,30%);
     }
 }
 .detail-cards{
@@ -197,7 +198,7 @@ HOME PAGE:
 
     .card-caption{
         font-size:14px;
-        padding:5px 0 5px 0;
+        padding:5px 2px 5px 2px;
         margin:10px 0 10px 0;
         font-weight:bold;
         min-height: 20px;

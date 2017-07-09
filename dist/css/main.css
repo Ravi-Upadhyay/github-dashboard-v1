@@ -139,6 +139,7 @@ HOME PAGE:
     color: #4d4d4d; }
   .home-page-cards .card-caption {
     font-size: 14px;
+    padding: 5px 2px 5px 2px;
     font-weight: bold;
     min-height: 30px;
     line-height: 30px;
@@ -150,7 +151,7 @@ HOME PAGE:
     line-height: 13px;
     padding: 10px 0 10px 0;
     overflow: hidden;
-    color: #6f6f6f; }
+    color: #a2a2a2; }
 
 .detail-cards {
   min-height: 200px;
@@ -163,7 +164,7 @@ HOME PAGE:
       height: 100px; }
   .detail-cards .card-caption {
     font-size: 14px;
-    padding: 5px 0 5px 0;
+    padding: 5px 2px 5px 2px;
     margin: 10px 0 10px 0;
     font-weight: bold;
     min-height: 20px;
