@@ -1,1 +1,25 @@
-<h1>Hello you are in Repos Screen</h1>
+
+    <!--CONTAINER: Container for application-->
+    <div layout="row" layout-wrap layout-align="center-start" class="page-container">
+
+        <div flex-xs="100" flex-sm="90" flex-gt-md="70" layout="row" md-whiteframe="1" class="my-header">
+            
+            <div flex-xs="30" flex-sm="20" flex-gt-md="20" class="child-centered">
+                <div class="avatar-image-header">
+                    <img alt='avatar-image' ng-src='{{$ctrl.rpData.avatarImage}}' />
+                </div>
+            </div>
+
+            <div flex-xs="70" flex-sm="80" flex-gt-md="80" layout="column" >
+                <h1>{{$ctrl.rpData.name}}</h1>
+            </div> 
+
+        </div>
+        <!--WRAPPER: Mainly for different devices it provides wrappers of different widths-->
+        <div flex-xs="100" flex-sm="90" flex-gt-md="70" layout="column" class="page-wrapper">            
+            <h3 class="regular-text text-center">REPOSITORIES</h3>
+        </div>
+        <!--WRAPPER: (ends)-->
+
+    </div>
+    <!--CONTAINER: (ends)-->

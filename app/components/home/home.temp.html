@@ -1,1 +1,66 @@
-<h1>Hello, Welcome!</h1>
+
+
+    <!--CONTAINER: Container for application-->
+    <div layout="row" layout-wrap layout-align="center-start" class="page-container">
+
+        <!--WRAPPER: Mainly for different devices it provides wrappers of different widths-->
+        <div flex-xs="100" flex-sm="90" flex-gt-md="70" layout="column" class="page-wrapper">
+            
+            <!--COLUMN-1: HEADER, USERNAME-FORM-->
+            <div flex="100">
+                <form name="$ctrl.formUserName" ng-submit="$ctrl.submitUserName()" class="my-form" flex="100" layout="row" layout-align="center center">
+                    <div class="my-md-input-container" flex-xs="65" flex-sm="70" flex-gt-md="80">
+                        <input name="userName" ng-model="$ctrl.hPData.userName" type="text" placeholder="YOUR GITHUB USERNAME" minlength="3" ng-required="true" ng-aria="github user name">
+                    </div>
+
+                    <div class="form-submit child-centered" flex-xs="35" flex-sm="30" flex-gt-md="20">
+                        <md-button class="md-primary md-raised" ng-disabled="$ctrl.formUserName.$invalid" type="submit">SUBMIT</md-button>
+                    </div>
+                </form>
+            </div>
+            <!--COLUMN-1: (ends)-->
+            
+            <!--COLUMN-2: COLUMN FOR AVATAR IMAGE AND NAME.VISIBLE ONLY IF DATA AVAILABLE-->
+            <div layout="row" flex="100" layout-align="center center" layout-wrap ng-if="$ctrl.hPData.dataRec !== undefined" class="user-description" md-whiteframe="1">
+                
+                <div flex-xs="60" flex-sm="30" flex-gt-md="20" class="avatar-image big">
+                    <img alt='avatar-image' ng-src='{{$ctrl.hPData.dataRec.avatarImage}}' class="md-avatar" />
+                </div>
+
+                <div flex-xs="80" flex-sm="70" flex-gt-md="80" layout="column" >
+
+                    <div flex="100" class="child-centered">
+                        <h1>{{$ctrl.hPData.dataRec.name}}</h1>
+                        <span><a ng-href="{{$ctrl.hPData.dataRec.htmlUrl}}"><i class="fa fa-external-link fa-icon-link" aria-hidden="true"></i></a></span>
+                    </div>
+                    <div flex="100" class="child-centered">
+                        <span class="regular-text">USER SINCE: {{$ctrl.hPData.dataRec.userSince | date:'MMM dd, yyyy' | uppercase}}</span>
+                    </div>
+                </div>
+                
+            </div>
+            <!--COLUMN-2: (ends)-->
+
+            <!--COLUMN-3: COLUMN FOR CARDS-->
+            <div layout="row" flex="100" layout-wrap ng-if="$ctrl.hPData.dataRec !== undefined" class="user-stats-data" layout-align="space-around center">
+                
+                <md-card flex-xs="100" flex-sm="30" flex-gt-md="30" class="my-card home-page-cards child-centered" ng-click="$ctrl.redirectTo('repos')">
+                    <span class="head-stat">{{$ctrl.hPData.dataRec.repoCount}}</span>
+                    <span class="card-caption">REPOSITORIES</span>
+                </md-card>
+                
+                <md-card flex-xs="100" flex-sm="30" flex-gt-md="30" class="my-card home-page-cards child-centered" ng-click="$ctrl.redirectTo('followers')">
+                    <span class="head-stat">{{$ctrl.hPData.dataRec.followerCount}}</span>
+                    <span class="card-caption">FOLLOWERS</span>
+                </md-card>
+                
+                <md-card flex-xs="100" flex-sm="30" flex-gt-md="30" class="my-card home-page-cards child-centered" ng-click="$ctrl.redirectTo('followers')">
+                    <span class="head-stat">{{$ctrl.hPData.dataRec.followingCount}}</span>
+                    <span class="card-caption">FOLLOWING</span>
+                </md-card>
+
+            </div>
+            <!--COLUMN-3 (ends)-->
+        </div>
+        <!--WRAPPER (ends)-->
+    </div>
