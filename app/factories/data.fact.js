@@ -23,7 +23,7 @@
   */
   function getUserData(userName){
     var url = getUrl(0,userName);
-    return $http.get(url).then(onSuccess,onFailure);
+    return $http.get(url,{cache:true}).then(onSuccess,onFailure);
   }
   
   /*
@@ -32,7 +32,7 @@
   */
   function getRepoData(userName){
       var url = getUrl(1,userName);
-      return $http.get(url).then(onSuccess,onFailure);
+      return $http.get(url,{cache:true}).then(onSuccess,onFailure);
     }
 
   /*
@@ -41,7 +41,7 @@
   */
   function getFollowerData(userName){
       var url = getUrl(2,userName);
-      return $http.get(url).then(onSuccess,onFailure);
+      return $http.get(url,{cache:true}).then(onSuccess,onFailure);
     }
 
   /*

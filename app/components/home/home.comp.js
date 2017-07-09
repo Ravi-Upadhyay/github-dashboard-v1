@@ -73,6 +73,13 @@
         $mdToast.showSimple('Please Select Proper User Name');
       }
     };
+  
+    (function(){
+      var userName = dataService.getData('userName');
+      if(userName !== undefined){
+        self.hPData.userName = userName;
+        self.submitUserName();
+      }
+    })();
   }
-
 })();
