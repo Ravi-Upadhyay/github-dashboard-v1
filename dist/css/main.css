@@ -1,5 +1,9 @@
 body {
-  font-size: 12px; }
+  font-size: 12px;
+  background-color: #f2f2f2; }
+
+html {
+  background-color: #f2f2f2; }
 
 /*
 * All Browser compatiable flex elements. If need arises to manually apply flex 
@@ -36,6 +40,29 @@ body {
   margin: auto; }
 
 /*
+* GENERIC CSS: css for page and general behaviour, page, containers, wrappers
+*/
+.page-wrapper, .page-wrapper-head {
+  padding: 15px;
+  overflow-y: auto; }
+
+.page-wrapper-head {
+  padding: 0 15px 15px 15px; }
+
+.regular-text {
+  color: #555555; }
+
+.text-center {
+  text-align: center; }
+
+.my-header {
+  background-color: #fff;
+  color: #4d4d4d !important;
+  border-bottom: 3px solid #666666;
+  min-height: 80px;
+  padding: 10px; }
+
+/*
 HOME PAGE: 
 */
 .my-form {
@@ -46,35 +73,57 @@ HOME PAGE:
     line-height: 2.4em;
     min-height: 2.4em;
     border: 1px solid #555555;
-    text-align: center; }
+    text-align: center;
+    text-transform: uppercase; }
   .my-form button {
     width: 98%;
-    margin: 0 0 0 2%; }
+    margin: 0 0 0 2%;
+    background-color: #4d4d4d !important; }
 
-.page-wrapper {
-  padding: 15px; }
-
-.avatar-image {
-  padding: 5px;
+.avatar-image, .avatar-image-header {
   border-radius: 50%;
   overflow: hidden;
   border: 2px groove #f0f0f0; }
-  .avatar-image img {
+  .avatar-image img, .avatar-image-header img {
     width: 100%;
     display: block; }
 
+.avatar-image-header {
+  width: 60px;
+  height: 60px; }
+
 .user-description {
-  background-color: #f2f2f2;
-  border-radius: 10px;
+  background-color: #fff;
+  border-radius: 2px;
   margin: 30px 0;
   padding: 20px; }
+  .user-description h1 {
+    margin: 10px 0 10px 0; }
 
 .fa-icon-link {
   color: #555555;
   font-weight: bold;
   font-size: 14px; }
 
-.regular-text {
-  color: #555555; }
+.my-card {
+  padding: 15px;
+  margin-bottom: 20px;
+  cursor: pointer; }
+
+.home-page-cards {
+  min-height: 150px;
+  text-align: center; }
+  .home-page-cards .head-stat {
+    font-size: 72px;
+    font-weight: bold;
+    min-height: 120px;
+    line-height: 120px;
+    color: #4d4d4d; }
+  .home-page-cards .card-caption {
+    font-size: 14px;
+    font-weight: bold;
+    min-height: 30px;
+    line-height: 30px;
+    color: #555555; }
 
 /*# sourceMappingURL=main.css.map */

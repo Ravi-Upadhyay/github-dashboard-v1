@@ -7,9 +7,9 @@
     controller: ('homeController', homeController)
   });
 
-  homeController.$inject = ['$mdToast','dataService','dataFactory'];
+  homeController.$inject = ['$mdToast','$state','dataService','dataFactory'];
 
-  function homeController($mdToast,dataService,dataFactory){
+  function homeController($mdToast,$state,dataService,dataFactory){
     var self = this;
     self.hPData = {
       userName:'',
@@ -46,9 +46,24 @@
             htmlUrl:data.response.data.html_url,
             email:data.response.data.email
           };
+          dataService.setData('avatarImage',self.hPData.dataRec.avatarImage);
+          dataService.setData('name',self.hPData.dataRec.name);
           console.log(self.hPData.dataRec);
         }
       });
+    };
+
+    /*
+    * FUNCTION: to be involed when user wants to see any thing in detail repos, followers, follows
+    */
+    self.redirectTo = function(stateName){
+      //Checking if userName set
+      if(dataService.getData('userName') !== undefined){
+        $state.go(stateName);
+      }
+      else{
+        $mdToast.showSimple('Please Select Proper User Name');
+      }
     };
   }
 

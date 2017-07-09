@@ -7,6 +7,10 @@ $light-general:#f2f2f2;
 
 body{
     font-size: 12px;
+    background-color:#f2f2f2;
+}
+html{
+    background-color:#f2f2f2;
 }
 
 /*
@@ -45,6 +49,38 @@ body{
 }
 //Child center classes end
 
+
+/*
+* GENERIC CSS: css for page and general behaviour, page, containers, wrappers
+*/
+.page-container{
+
+}
+.page-wrapper{
+    padding:15px;
+    overflow-y: auto;
+}
+.page-wrapper-head{
+    @extend .page-wrapper;
+    padding: 0 15px 15px 15px;
+}
+.regular-text{
+    color:$regular-text;
+}
+.text-center{
+    text-align: center;
+}
+.my-header{
+    background-color: #fff;
+    color:lighten(#000, 30%) !important;
+    border-bottom:3px solid lighten(#000, 40%);
+    min-height:80px;
+    padding:10px;
+    .header-avatar{
+        
+    }
+}
+
 /*
 HOME PAGE: 
 */
@@ -57,20 +93,17 @@ HOME PAGE:
         min-height: 2.4em; 
         border:1px solid $regular-text;
         text-align: center;  
+        text-transform: uppercase;
     }
     button{
         width: 98%;
         margin:0 0 0 2%;
+        background-color: lighten(#000, 30%) !important;
     } 
 }
-.page-container{
 
-}
-.page-wrapper{
-    padding:15px;
-}
 .avatar-image{
-    padding: 5px;
+    // padding: 5px;
     border-radius: 50%;
     overflow: hidden;
     border: 2px groove #f0f0f0;
@@ -79,18 +112,50 @@ HOME PAGE:
         display: block;
     }
 }
+.avatar-image-header{
+    @extend .avatar-image;
+    width: 60px;
+    height: 60px;
+}
+
 .user-description{
-    background-color:#f2f2f2;
-    border-radius:10px;
+    background-color:#fff;
+    border-radius:2px;
     // border-bottom: 3px groove #004ab4;
     margin:30px 0;
     padding:20px;
+    h1{
+        margin: 10px 0 10px 0;
+    }
 }
 .fa-icon-link{
     color: $regular-text;
     font-weight: bold;
     font-size: 14px;
 }
-.regular-text{
-    color:$regular-text;
+
+.my-card{
+    padding: 15px;
+    margin-bottom: 20px;
+    cursor: pointer;
+}
+.home-page-cards{
+    min-height:150px;
+    text-align: center;
+    .head-stat{
+        font-size: 72px;
+        font-weight: bold;
+        min-height: 120px;
+        line-height: 120px;
+        color:lighten(#000, 30%);
+    }
+
+    .card-caption{
+        font-size:14px;
+        font-weight:bold;
+        min-height: 30px;
+        line-height: 30px;
+        color:$regular-text;
+    }
+
 }

@@ -27,7 +27,7 @@
                     <img alt='avatar-image' ng-src='{{$ctrl.hPData.dataRec.avatarImage}}' class="md-avatar" />
                 </div>
 
-                <div flex-xs="70" flex-sm="70" flex-gt-md="80" layout="column" >
+                <div flex-xs="80" flex-sm="70" flex-gt-md="80" layout="column" >
 
                     <div flex="100" class="child-centered">
                         <h1>{{$ctrl.hPData.dataRec.name}}</h1>
@@ -38,9 +38,29 @@
                     </div>
                 </div>
                 
-                
             </div>
             <!--COLUMN-2: (ends)-->
+
+            <!--COLUMN-3: COLUMN FOR CARDS-->
+            <div layout="row" flex="100" layout-wrap ng-if="$ctrl.hPData.dataRec !== undefined" class="user-stats-data" layout-align="space-around center">
+                
+                <md-card flex-xs="100" flex-sm="30" flex-gt-md="30" class="my-card home-page-cards child-centered" ng-click="$ctrl.redirectTo('repos')">
+                    <span class="head-stat">{{$ctrl.hPData.dataRec.repoCount}}</span>
+                    <span class="card-caption">REPOSITORIES</span>
+                </md-card>
+                
+                <md-card flex-xs="100" flex-sm="30" flex-gt-md="30" class="my-card home-page-cards child-centered" ng-click="$ctrl.redirectTo('followers')">
+                    <span class="head-stat">{{$ctrl.hPData.dataRec.followerCount}}</span>
+                    <span class="card-caption">FOLLOWERS</span>
+                </md-card>
+                
+                <md-card flex-xs="100" flex-sm="30" flex-gt-md="30" class="my-card home-page-cards child-centered" ng-click="$ctrl.redirectTo('followers')">
+                    <span class="head-stat">{{$ctrl.hPData.dataRec.followingCount}}</span>
+                    <span class="card-caption">FOLLOWING</span>
+                </md-card>
+
+            </div>
+            <!--COLUMN-3 (ends)-->
         </div>
         <!--WRAPPER (ends)-->
     </div>
